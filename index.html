@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="css/cover.css" rel="stylesheet">
+    <title>Who's that Digimon?</title>
+    <link rel="icon" href="img/digivice.png">
+    <meta name="theme-color" content="#712cf9">
+</head>
+<body class="text-center bd-placeholder-img">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand"><img src="img/logo.png" alt="Digimon logo"></h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="index.html">Nombre</a>
+                    <a class="nav-link" href="level.html">Nivel</a>
+                    <a class="nav-link" href="all.html">Todos</a>
+                </nav>
+            </div>
+        </header>
+        <main role="main" class="inner cover">
+            <div class="container my-5">
+                <h1>Busca tu digimon favorito por nombre</h1>
+                <div class="form-group">
+                    <label for="digimon-name">Nombre</label>
+                    <input type="text" id="digimon-name" class="form-control"
+                        placeholder="mi favorito es angemon">
+                </div>
+                <button id="buscar" class="btn btn-outline-secondary btn-lg">Buscar</button>
+                <div id="result-container" class="mt-3"></div>
+            </div>
+            </p>
+        </main>
+        <!--ORDER IS: ALWAYS GUDDAMN JQUERY, SHTUPID POPPER and then the nice boot strap min dot jay es-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/digimon-search.js"></script>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Brought to you by <a href="https://i.imgflip.com/2asihb.jpg">Issa.</a></p>
+                <p>Find me on <a href="https://github.com/mguala">github</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
