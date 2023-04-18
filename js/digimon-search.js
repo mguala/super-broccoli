@@ -1,47 +1,4 @@
 $(document).ready(function() {
-  // Add event listener for input field keyup
-  $('#digimon-name').keyup(function() {
-    // Get search query from input field
-    var query = $(this).val().toLowerCase();
-    
-    // Make AJAX request to Digimon API
-    $.ajax({
-      url: 'https://digimon-api.vercel.app/api/digimon',
-      success: function(data) {
-        // Filter data based on search query
-        var filteredData = data.filter(function(digimon) {
-          return digimon.name.toLowerCase().includes(query);
-        });
-        
-        // Build suggestion list HTML
-        var html = '';
-        filteredData.forEach(function(digimon) {
-          html += '<li>' + digimon.name + '</li>';
-        });
-        
-        // Display suggestion list
-        $('#suggestion-list').html(html);
-      },
-      error: function(xhr, status, error) {
-        // Display error message
-        console.error(error);
-      }
-    });
-  });
-  
-  // Add event listener for suggestion list click
-  $('#suggestion-list').on('click', 'li', function() {
-    // Set input field value to clicked suggestion
-    var suggestion = $(this).text();
-    $('#digimon-name').val(suggestion);
-    
-    // Clear suggestion list
-    $('#suggestion-list').html('');
-    
-    // Search for Digimon
-    searchDigimon();
-  });
-  
   // Add click listener to search button
   $('#buscar').click(function() {
     searchDigimon();
